@@ -32,7 +32,7 @@ export const getDisconnected = () => ({
 
 export const getDisconnectedError = (error) => ({
   type: GET_DISCONNECTED_ERROR,
-  payload: { error: error },
+  payload: { error },
 });
 
 export const getDisconnectedSuccess = () => ({

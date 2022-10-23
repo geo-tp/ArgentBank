@@ -15,19 +15,22 @@ export function loginAttempt(email, password) {
     return fetch(LOGIN_ROUTE, params)
       .then((response) => {
         if (!response.ok) {
-          throw new Error("NOT FOUND");
+          throw "La connexion a échouée";
         }
 
         return response.json();
       })
       .then((data) => {
-        const token = data.token;
+        console.log("DATA", data);
+        const token = data.body.token;
         dispatch(getConnectedSuccess(token));
 
         return 1;
       })
 
       .catch((error) => {
+        console.log(error);
+
         dispatch(getConnectedError(error));
 
         return 0;
