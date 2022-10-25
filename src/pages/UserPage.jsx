@@ -25,8 +25,6 @@ export const UserPage = () => {
     return <Navigate replace to="/signin" />;
   }
 
-  console.log("IS OPEN", modalIsOpen);
-
   return (
     <main class="main bg-dark">
       <UserHeader firstName={user.firstName} lastName={user.lastName} />

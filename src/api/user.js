@@ -30,8 +30,6 @@ export function fetchUserProfile() {
       })
 
       .catch((error) => {
-        console.log(error);
-
         dispatch(getUserError(error));
       });
   };

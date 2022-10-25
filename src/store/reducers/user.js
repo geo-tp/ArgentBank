@@ -14,7 +14,6 @@ export const userReducer = (state = defaultUserState, action) => {
       return { ...defaultUserState, isLoading: true };
 
     case GET_USER_SUCCESS:
-      console.log(action.payload.user);
       const user = action.payload.user;
       return {
         ...defaultUserState,

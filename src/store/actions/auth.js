@@ -6,8 +6,6 @@ import {
   GET_CONNECTED_ERROR,
   GET_CONNECTED_SUCCESS,
   GET_DISCONNECTED,
-  GET_DISCONNECTED_ERROR,
-  GET_DISCONNECTED_SUCCESS,
 } from "../constants/auth";
 
 export const getConnected = (mail, password) => ({
