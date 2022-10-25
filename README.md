@@ -1,3 +1,30 @@
+# Argent Bank
+
+Banque en ligne
+
+![](presentation.png)
+
+## Dépendances
+
+- react
+- react-router-dom
+- react-redux
+- @reduxjs/toolkit
+
+## Installation
+
+#### `npm install`
+
+Installe les fichiers necessaires au fonctionnement de l'application
+
+#### `npm start`
+
+Lance l'application en mode developpement
+
+## See Argent Bank Live
+
+[Link to Argent Bank website](https://geo-tp.github.io/ArgentBank)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
