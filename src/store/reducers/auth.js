@@ -2,13 +2,13 @@ import {
   GET_CONNECTED,
   GET_CONNECTED_ERROR,
   GET_CONNECTED_SUCCESS,
+  GET_DISCONNECTED,
 } from "../constants/auth";
 import { authDefaultState } from "../states/auth";
 
 export const authReducer = (state = authDefaultState, action) => {
   switch (action.type) {
     case GET_CONNECTED:
-      console.log("IN GET CO");
       return {
         ...state,
         isLoading: true,
@@ -18,8 +18,6 @@ export const authReducer = (state = authDefaultState, action) => {
       };
 
     case GET_CONNECTED_SUCCESS:
-      console.log("IN GET CO SUCCESS");
-
       return {
         ...state,
         isLoading: false,
@@ -29,8 +27,6 @@ export const authReducer = (state = authDefaultState, action) => {
       };
 
     case GET_CONNECTED_ERROR:
-      console.log("IN GET CO ERROR");
-
       return {
         ...state,
         isLoading: false,
@@ -38,6 +34,12 @@ export const authReducer = (state = authDefaultState, action) => {
         isConnected: false,
         token: null,
       };
+
+    case GET_DISCONNECTED:
+      return {
+        ...authDefaultState,
+      };
+
     default:
       return state;
   }

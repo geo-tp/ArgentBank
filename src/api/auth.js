@@ -24,16 +24,10 @@ export function loginAttempt(email, password) {
         console.log("DATA", data);
         const token = data.body.token;
         dispatch(getConnectedSuccess(token));
-
-        return 1;
       })
 
       .catch((error) => {
-        console.log(error);
-
         dispatch(getConnectedError(error));
-
-        return 0;
       });
   };
 }

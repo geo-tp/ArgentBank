@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { loginAttempt } from "../api/auth";
 import { getAuth } from "../store/selectors/auth";
+
 export const SigninForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -14,10 +15,7 @@ export const SigninForm = () => {
     dispatch(loginAttempt(username, password));
   };
 
-  console.log("AUTH", auth);
-
   if (auth.isConnected) {
-    console.log("IN NAV");
     return <Navigate replace to="/user" />;
   }
 

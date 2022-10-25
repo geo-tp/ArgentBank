@@ -1,19 +1,18 @@
 import PropTypes from "prop-types";
 
-export const UserHeader = ({ firstname, lastname }) => {
+export const UserHeader = ({ firstName, lastName }) => {
   return (
     <div class="header">
       <h1>
         Welcome back
         <br />
-        {firstname} {lastname}
+        {firstName} {lastName}
       </h1>
-      <button class="edit-button">Edit Name</button>
     </div>
   );
 };
 
 UserHeader.propsType = {
-  firstname: PropTypes.string.isRequired,
-  lastname: PropTypes.string.isRequired,
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
 };

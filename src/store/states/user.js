@@ -1,5 +1,9 @@
 export const defaultUserState = {
-  id: 19809,
-  firstname: "Tony",
-  lastname: "Jarvis",
+  isLoaded: false,
+  isLoading: false,
+  isError: false,
+  id: null,
+  email: null,
+  firstName: null,
+  lastName: null,
 };
