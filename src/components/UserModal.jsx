@@ -26,6 +26,8 @@ export const UserModal = ({ setModalIsOpen }) => {
         >
           <i className="fa fa-close"></i>
         </div>
+        <i className="fa fa-user-circle sign-in-icon"></i>
+        <h2>Edit</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label htmlFor="profile-firstname">Firstname</label>
