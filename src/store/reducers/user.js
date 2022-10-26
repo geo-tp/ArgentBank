@@ -6,24 +6,24 @@ import {
   UPDATE_USER_ERROR,
   UPDATE_USER_SUCCESS,
 } from "../constants/user";
-import { defaultUserState } from "../states/user";
+import { userDefaultState } from "../states/user";
 
-export const userReducer = (state = defaultUserState, action) => {
+export const userReducer = (state = userDefaultState, action) => {
   switch (action.type) {
     case GET_USER:
-      return { ...defaultUserState, isLoading: true };
+      return { ...userDefaultState, isLoading: true };
 
     case GET_USER_SUCCESS:
       const user = action.payload.user;
       return {
-        ...defaultUserState,
+        ...userDefaultState,
         isLoaded: true,
         ...user,
       };
 
     case GET_USER_ERROR:
       return {
-        ...defaultUserState,
+        ...userDefaultState,
         isError: action.payload.error,
       };
 
@@ -35,14 +35,14 @@ export const userReducer = (state = defaultUserState, action) => {
 
     case UPDATE_USER_SUCCESS:
       return {
-        ...defaultUserState,
+        ...userDefaultState,
         isLoaded: true,
         ...action.payload.user,
       };
 
     case UPDATE_USER_ERROR:
       return {
-        ...defaultUserState,
+        ...userDefaultState,
         isError: action.payload.error,
       };
     default:

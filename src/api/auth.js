@@ -3,7 +3,7 @@ import {
   getConnectedError,
   getConnectedSuccess,
 } from "../store/actions/auth";
-import { LOGIN_ERROR } from "../utils/messages";
+import { LOGIN_ERROR } from "./utils/messages";
 import { formatRequestParameters } from "./utils/formatters";
 import { LOGIN_ROUTE } from "./utils/routes";
 

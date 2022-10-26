@@ -1,4 +1,4 @@
-export const defaultUserState = {
+export const userDefaultState = {
   isLoaded: false,
   isLoading: false,
   isError: false,

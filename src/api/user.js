@@ -6,7 +6,7 @@ import {
   updateUserError,
   updateUserSuccess,
 } from "../store/actions/user";
-import { PROFILE_ERROR, PROFILE_UPDATE_ERROR } from "../utils/messages";
+import { PROFILE_ERROR, PROFILE_UPDATE_ERROR } from "./utils/messages";
 import { formatRequestParameters } from "./utils/formatters";
 import { USER_ROUTE } from "./utils/routes";
 

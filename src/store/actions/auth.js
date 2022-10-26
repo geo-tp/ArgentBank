@@ -30,12 +30,12 @@ export const getDisconnected = () => ({
 
 export const createAccount = (registrationInfos) => ({
   type: CREATE_ACCOUNT,
-  payload: { registrationInfos: registrationInfos },
+  payload: { registrationInfos },
 });
 
 export const createAccountError = (error) => ({
   type: CREATE_ACCOUNT_ERROR,
-  payload: { error: error },
+  payload: { error },
 });
 
 export const createAccountSuccess = () => ({
