@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 export const UserHeader = ({ firstName, lastName }) => {
   return (
-    <div class="header">
+    <div className="header">
       <h1>
         Welcome back
         <br />

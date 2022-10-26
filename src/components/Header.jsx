@@ -16,8 +16,8 @@ export const Header = () => {
 
   return (
     <header>
-      <nav class="main-nav">
-        <Link class="main-nav-logo" to="/">
+      <nav className="main-nav">
+        <Link className="main-nav-logo" to="/">
           <img
             className="main-nav-logo-image"
             src={ArgentBankLogo}
@@ -25,7 +25,7 @@ export const Header = () => {
           />
           <h1 className="sr-only">Argent Bank</h1>
         </Link>
-        <div class="main-nav-links">
+        <div className="main-nav-links">
           <Link
             className="main-nav-item"
             to={auth.isConnected ? "user" : "signin"}

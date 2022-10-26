@@ -7,7 +7,7 @@ export const UserButtons = ({ setModalIsOpen }) => {
 
   return (
     <div className="user-buttons">
-      <button class="edit-button" onClick={() => setModalIsOpen(true)}>
+      <button className="edit-button" onClick={() => setModalIsOpen(true)}>
         Edit Name
       </button>
     </div>

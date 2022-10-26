@@ -26,10 +26,10 @@ export const UserPage = () => {
   }
 
   return (
-    <main class="main bg-dark">
+    <main className="main bg-dark">
       <UserHeader firstName={user.firstName} lastName={user.lastName} />
       <UserButtons setModalIsOpen={setModalIsOpen} />
-      <h2 class="sr-only">Accounts</h2>
+      <h2 className="sr-only">Accounts</h2>
       <UserTransaction
         title="Argent Bank Checking (x8349)"
         amount="$2,082.79"

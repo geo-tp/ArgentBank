@@ -9,7 +9,7 @@ export const HomePage = () => {
     <main>
       <Hero />
       <section className="features">
-        <h2 class="sr-only">Features</h2>
+        <h2 className="sr-only">Features</h2>
         <FeatureItem
           icon={ChatIcon}
           alt="Chat Icon"
