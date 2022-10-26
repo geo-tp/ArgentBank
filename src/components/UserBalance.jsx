@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export const UserTransaction = ({ title, amount, description }) => {
+export const UserBalance = ({ title, amount, description }) => {
   return (
     <section className="account">
       <div className="account-content-wrapper">
@@ -15,7 +15,7 @@ export const UserTransaction = ({ title, amount, description }) => {
   );
 };
 
-UserTransaction.propsType = {
+UserBalance.propsType = {
   title: PropTypes.string.isRequired,
   amount: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
