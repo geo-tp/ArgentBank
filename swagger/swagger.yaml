@@ -1,9 +1,9 @@
-swagger: '2.0'
+swagger: "2.0"
 info:
   title: Bank Argent API documentation
   description: Contains all available API endpoints in this codebase
-  version: '1.0.0'
-  termsOfService: 'http://swagger.io/terms/'
+  version: "1.0.1"
+  termsOfService: "http://swagger.io/terms/"
 host: localhost:3001
 basePath: /api/v1
 schemes:
@@ -21,17 +21,17 @@ paths:
           description: Login Payload
           required: true
           schema:
-            $ref: '#/definitions/Login'
+            $ref: "#/definitions/Login"
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: Login Successfully
           schema:
-            $ref: '#/definitions/LoginResponse'
-        '400':
+            $ref: "#/definitions/LoginResponse"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /user/signup:
     post:
@@ -45,17 +45,17 @@ paths:
           description: Signup Payload
           required: true
           schema:
-            $ref: '#/definitions/User'
+            $ref: "#/definitions/User"
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: Signup Successfully
           schema:
-            $ref: '#/definitions/ApiResponse'
-        '400':
+            $ref: "#/definitions/ApiResponse"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /user/profile:
     post:
@@ -74,13 +74,13 @@ paths:
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: User profile retrieved successully
           schema:
-            $ref: '#/definitions/ApiResponse'
-        '400':
+            $ref: "#/definitions/ApiResponse"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
     put:
       security:
@@ -100,17 +100,17 @@ paths:
           description: Update user profile attributes
           required: true
           schema:
-            $ref: '#/definitions/UserProfile'
+            $ref: "#/definitions/UserProfile"
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: User profile retrieved successully
           schema:
-            $ref: '#/definitions/ApiResponse'
-        '400':
+            $ref: "#/definitions/ApiResponse"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /user/transactions:
     post:
@@ -129,13 +129,13 @@ paths:
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: User transactions retrieved successully
           schema:
-            $ref: '#/definitions/UserTransactions'
-        '400':
+            $ref: "#/definitions/UserTransactions"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /user/transactions/create:
     post:
@@ -156,17 +156,17 @@ paths:
           description: Create user transaction
           required: true
           schema:
-            $ref: '#/definitions/Transaction'
+            $ref: "#/definitions/Transaction"
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: User transaction created successully
           schema:
-            $ref: '#/definitions/Transaction'
-        '400':
+            $ref: "#/definitions/Transaction"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
   /user/transactions/:id:
     post:
@@ -185,15 +185,15 @@ paths:
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: User transaction details retrieved successully
           schema:
-            $ref: '#/definitions/Transaction'
-        '400':
+            $ref: "#/definitions/Transaction"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
-          
+
     put:
       security:
         - Bearer: []
@@ -212,17 +212,17 @@ paths:
           description: Update user profile attributes
           required: true
           schema:
-            $ref: '#/definitions/Transaction'
+            $ref: "#/definitions/Transaction"
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: User transaction details updated successully
           schema:
-            $ref: '#/definitions/Transaction'
-        '400':
+            $ref: "#/definitions/Transaction"
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
     delete:
       security:
@@ -240,11 +240,11 @@ paths:
       produces:
         - application/json
       responses:
-        '200':
+        "200":
           description: User transaction deleted successully
-        '400':
+        "400":
           description: Invalid Fields
-        '500':
+        "500":
           description: Internal Server Error
 securityDefinitions:
   Bearer:
@@ -269,11 +269,11 @@ definitions:
   Transaction:
     type: object
     properties:
-      id: 
+      id:
         type: string
       type:
         type: number
-      currency: 
+      currency:
         type: string
       amount:
         type: number
@@ -331,11 +331,11 @@ definitions:
         items:
           type: object
           properties:
-            id: 
+            id:
               type: string
             type:
               type: number
-            currency: 
+            currency:
               type: string
             amount:
               type: number

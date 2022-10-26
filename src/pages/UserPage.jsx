@@ -8,7 +8,6 @@ import { Navigate } from "react-router-dom";
 import { getAuth } from "../store/selectors/auth";
 import { UserButtons } from "../components/UserButtons";
 import { UserModal } from "../components/UserModal";
-import { getDisconnected } from "../store/actions/auth";
 
 export const UserPage = () => {
   const user = useSelector(getUser);
@@ -23,7 +22,6 @@ export const UserPage = () => {
   if (user.isLoading) {
     return "loading";
   } else if (user.isError || !auth.isConnected) {
-    dispatch(getDisconnected());
     return <Navigate replace to="/signin" />;
   }
 
