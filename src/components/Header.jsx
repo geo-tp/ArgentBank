@@ -37,7 +37,7 @@ export const Header = () => {
           {auth.isConnected && (
             <div className="main-nav-item" onClick={handleSignout}>
               <i className="fa fa-sign-out"></i>
-              Disconnect
+              Sign out
             </div>
           )}
         </div>
