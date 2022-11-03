@@ -13,6 +13,8 @@ Banque en ligne
 
 ## Installation
 
+Created with Node version 17.9.1 and npm version 8.11.0.
+
 #### `npm install`
 
 Installe les fichiers necessaires au fonctionnement de l'application
