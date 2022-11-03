@@ -9,53 +9,28 @@ import {
 import { PROFILE_ERROR, PROFILE_UPDATE_ERROR } from "./utils/messages";
 import { formatRequestParameters } from "./utils/formatters";
 import { USER_ROUTE } from "./utils/routes";
+import { fetchJson } from "./utils/fetchers";
 
 export function fetchUserProfile() {
-  return (dispatch) => {
-    dispatch(getUser());
-
-    const params = formatRequestParameters("POST", {});
-
-    return fetch(USER_ROUTE, params)
-      .then((response) => {
-        if (!response.ok) {
-          throw PROFILE_ERROR;
-        }
-
-        return response.json();
-      })
-      .then((data) => {
-        const user = data.body;
-        dispatch(getUserSuccess(user));
-      })
-
-      .catch((error) => {
-        dispatch(getUserError(error));
-      });
-  };
+  const params = formatRequestParameters("POST", {});
+  return fetchJson(
+    getUser,
+    getUserSuccess,
+    getUserError,
+    USER_ROUTE,
+    PROFILE_ERROR,
+    params
+  );
 }
 
 export function fetchUserUpdate(firstName, lastName) {
-  return (dispatch) => {
-    dispatch(updateUser());
-
-    const params = formatRequestParameters("PUT", { firstName, lastName });
-
-    return fetch(USER_ROUTE, params)
-      .then((response) => {
-        if (!response.ok) {
-          throw PROFILE_UPDATE_ERROR;
-        }
-
-        return response.json();
-      })
-      .then((data) => {
-        const user = data.body;
-        dispatch(updateUserSuccess(user));
-      })
-
-      .catch((error) => {
-        dispatch(updateUserError(error));
-      });
-  };
+  const params = formatRequestParameters("PUT", { firstName, lastName });
+  return fetchJson(
+    updateUser,
+    updateUserSuccess,
+    updateUserError,
+    USER_ROUTE,
+    PROFILE_UPDATE_ERROR,
+    params
+  );
 }

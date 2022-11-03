@@ -13,9 +13,9 @@ export const getConnected = (mail, password) => ({
   payload: { mail, password },
 });
 
-export const getConnectedSuccess = (token) => ({
+export const getConnectedSuccess = (loginInfos) => ({
   type: GET_CONNECTED_SUCCESS,
-  payload: { token },
+  payload: { loginInfos },
 });
 
 export const getConnectedError = (error) => ({

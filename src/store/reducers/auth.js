@@ -23,7 +23,7 @@ export const authReducer = (state = authDefaultState, action) => {
         isLoading: false,
         isError: false,
         isConnected: true,
-        token: action.payload.token,
+        token: action.payload.loginInfos.token,
       };
 
     case GET_CONNECTED_ERROR:

@@ -1,5 +1,10 @@
 import { getHeaders } from "./headers";
-
+/**
+ *
+ * @param {string} method - HTTP verb
+ * @param {object} body - containing informations for POST/PATCH/PUT requests
+ * @returns {object} - Json formatted parameters
+ */
 export function formatRequestParameters(method, body = null) {
   const headers = getHeaders();
   switch (method) {
